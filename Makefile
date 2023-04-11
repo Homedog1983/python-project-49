@@ -16,9 +16,13 @@ brain-even:
 	poetry run brain-even
 brain-calc:
 	poetry run brain-calc
+brain-gcd:
+	poetry run brain-gcd
 run-games:
 	poetry run python -m brain_games.scripts.brain_games
 run-even:
 	poetry run python -m brain_games.scripts.brain_even
 run-calc:
 	poetry run python -m brain_games.scripts.brain_calc
+run-gcd:
+	poetry run python -m brain_games.scripts.brain_gcd

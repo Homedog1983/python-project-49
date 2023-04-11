@@ -1,12 +1,14 @@
 import brain_games.games.even as even
 import brain_games.games.calc as calc
+import brain_games.games.gcd as gcd
 
 
 # 'u' : 'user', 'g' : 'game', 'q' : 'question', 'qty' : 'quantity'
-g_names = ['even', 'calc', ]
+g_names = ['even', 'calc', 'gcd']
 g_funcs = [
     [even.greeting, even.eval],
-    [calc.greeting, calc.eval]
+    [calc.greeting, calc.eval],
+    [gcd.greeting, gcd.eval]
 ]
 
 
