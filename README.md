@@ -10,3 +10,5 @@ https://asciinema.org/a/576611
 https://asciinema.org/a/576638
 #### Game "Find missing in progression"
 https://asciinema.org/a/576706
+#### Game "Is this integer is prime?"
+https://asciinema.org/a/576873

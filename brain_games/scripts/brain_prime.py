@@ -5,7 +5,7 @@ import brain_games.cli as cli
 import brain_games.game_engine as game_engine
 
 
-game_name = 'progression'
+game_name = 'prime'
 qty_of_questions = 3
 
 

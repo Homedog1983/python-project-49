@@ -10,7 +10,6 @@ def greeting():
 
 def eval():
     value = randint(1, random_stop)
-    is_even = value % 2 == 0
     question = str(value)
-    right_answer = 'yes' if is_even else 'no'
+    right_answer = 'yes' if value % 2 == 0 else 'no'
     return question, right_answer

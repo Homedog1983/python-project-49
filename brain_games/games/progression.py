@@ -1,6 +1,5 @@
 from random import randint
 
-
 # 'n' : 'number', 'rnd' : 'random'
 n_rnd_stop = 15
 n_rnd_start = 5

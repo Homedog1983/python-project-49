@@ -1,10 +1,11 @@
 from random import randint
 from operator import add, sub, mul
 
-random_stop = 100
 # 'op' : 'operator'
+
 op_names = [' + ', ' - ', ' * ']
 op_funcs = [add, sub, mul]
+random_stop = 100
 
 
 def greeting():

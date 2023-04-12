@@ -11,17 +11,6 @@ package-reinstall:
 lint:
 	poetry run flake8 brain_games
 
-brain-games:
-	poetry run brain-games
-brain-even:
-	poetry run brain-even
-brain-calc:
-	poetry run brain-calc
-brain-gcd:
-	poetry run brain-gcd
-brain-progression:
-	poetry run brain-progression
-
 run-games:
 	poetry run python -m brain_games.scripts.brain_games
 run-even:
@@ -32,3 +21,6 @@ run-gcd:
 	poetry run python -m brain_games.scripts.brain_gcd
 run-progression:
 	poetry run python -m brain_games.scripts.brain_progression
+run-prime:
+	poetry run python -m brain_games.scripts.brain_prime
+
