@@ -1,17 +1,14 @@
 #!/usr/bin/env python3
 
 
-import brain_games.cli as cli
-import brain_games.game_engine as game_engine
-
-
-game_name = 'even'
-qty_of_questions = 3
+from brain_games.games.even import eval, DESCRIPTION
+from brain_games.game import engine
 
 
 def main():
-    user_name = cli.welcome_user()
-    game_engine.game(user_name, game_name, qty_of_questions)
+    # 'q_qty' : 'quantity of questions'
+    q_qty = 3
+    engine(eval, DESCRIPTION, q_qty)
 
 
 if __name__ == '__main__':

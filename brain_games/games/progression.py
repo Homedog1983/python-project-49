@@ -1,17 +1,14 @@
 from random import randint
 
-# 'n' : 'number', 'rnd' : 'random'
-n_rnd_stop = 15
-n_rnd_start = 5
-max_rnd_start = 20
-max_rnd_step = 5
 
-
-def greeting():
-    print('What number is missing in the progression?')
+DESCRIPTION = 'What number is missing in the progression?'
 
 
 def eval():
+    n_rnd_stop = 15
+    n_rnd_start = 5
+    max_rnd_start = 20
+    max_rnd_step = 5
     # 'pr' : 'progression', 'q' : 'question', 'i' : 'index of list'
     pr_start = randint(1, max_rnd_start)
     pr_step = randint(1, max_rnd_step)
