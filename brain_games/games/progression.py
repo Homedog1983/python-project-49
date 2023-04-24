@@ -5,18 +5,18 @@ DESCRIPTION = 'What number is missing in the progression?'
 
 
 def eval():
-    n_rnd_stop = 15
-    n_rnd_start = 5
-    max_rnd_start = 20
-    max_rnd_step = 5
-    # 'pr' : 'progression', 'q' : 'question', 'i' : 'index of list'
-    pr_start = randint(1, max_rnd_start)
-    pr_step = randint(1, max_rnd_step)
-    pr_n = randint(n_rnd_start, n_rnd_stop)
-    pr_list = list(pr_start + _ * pr_step for _ in range(pr_n))
-    pr_q_i = randint(0, pr_n - 1)
-    right_answer = str(pr_list[pr_q_i])
-    pr_str_list = list(map(str, pr_list))
-    pr_str_list[pr_q_i] = '..'
-    question = ' '.join(pr_str_list)
+    n_start = 5
+    n_stop = 15
+    max_start = 20
+    max_step = 5
+    # 'progr' : 'progression'
+    progr_start = randint(1, max_start)
+    progr_step = randint(1, max_step)
+    progr_n = randint(n_start, n_stop)
+    progression = list(progr_start + i * progr_step for i in range(progr_n))
+    # quest_i : index of progression to replace by '..' for question
+    quest_i = randint(0, progr_n - 1)
+    right_answer = f'{progression[quest_i]}'
+    progression[quest_i] = '..'
+    question = ' '.join(str(item) for item in progression)
     return question, right_answer

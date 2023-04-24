@@ -6,11 +6,15 @@ DESCRIPTION = 'What is the result of the expression?'
 
 
 def eval():
-    random_stop = 100
-    operators = [' + ', ' - ', ' * ', add, sub, mul]
-    rnd_op_num = randint(0, 2)
-    a = randint(1, random_stop)
-    b = randint(1, random_stop)
-    question = str(a) + operators[rnd_op_num] + str(b)
-    right_answer = str(operators[rnd_op_num + 3](a, b))
+    operators = {
+        0: ['+', add],
+        1: ['-', sub],
+        2: ['*', mul]
+    }
+    random_n = randint(0, 2)
+    max_value = 100
+    a = randint(1, max_value)
+    b = randint(1, max_value)
+    question = f'{a} {operators[random_n][0]} {b}'
+    right_answer = f'{operators[random_n][1](a, b)}'
     return question, right_answer

@@ -1,14 +1,12 @@
 #!/usr/bin/env python3
 
 
-from brain_games.games.even import eval, DESCRIPTION
+import brain_games.games.even as even
 from brain_games.game import engine
 
 
 def main():
-    # 'q_qty' : 'quantity of questions'
-    q_qty = 3
-    engine(eval, DESCRIPTION, q_qty)
+    engine(even)
 
 
 if __name__ == '__main__':

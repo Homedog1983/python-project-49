@@ -6,10 +6,10 @@ DESCRIPTION = 'Find the greatest common divisor of given numbers.'
 
 
 def eval():
-    rnd_stop_min = 10
-    rnd_stop_max = 30
-    a = randint(1, rnd_stop_min) * randint(1, rnd_stop_min)
-    b = randint(1, rnd_stop_min) * randint(1, rnd_stop_max)
-    question = str(a) + ' ' + str(b)
-    right_answer = str(gcd(a, b))
+    min_value = 10
+    max_value = 30
+    a = randint(1, min_value) * randint(1, min_value)
+    b = randint(1, min_value) * randint(1, max_value)
+    question = f'{a} {b}'
+    right_answer = f'{gcd(a, b)}'
     return question, right_answer
