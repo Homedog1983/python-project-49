@@ -5,16 +5,15 @@ from operator import add, sub, mul
 DESCRIPTION = 'What is the result of the expression?'
 
 
-def eval():
-    operators = {
-        0: ['+', add],
-        1: ['-', sub],
-        2: ['*', mul]
-    }
-    random_n = randint(0, 2)
+def get_question_answer() -> tuple:
+    # parameters for function's tuning
     max_value = 100
+
+    operations = {'+': add, '-': sub, '*': mul}
+    random_n = randint(0, 2)
+    random_operator = list(operations.keys())[random_n]
     a = randint(1, max_value)
     b = randint(1, max_value)
-    question = f'{a} {operators[random_n][0]} {b}'
-    right_answer = f'{operators[random_n][1](a, b)}'
+    question = f'{a} {random_operator} {b}'
+    right_answer = f'{operations[random_operator](a, b)}'
     return question, right_answer

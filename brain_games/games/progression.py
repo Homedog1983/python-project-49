@@ -4,19 +4,19 @@ from random import randint
 DESCRIPTION = 'What number is missing in the progression?'
 
 
-def eval():
+def get_question_answer() -> tuple:
+    # parameters for function's tuning
     n_start = 5
     n_stop = 15
     max_start = 20
     max_step = 5
-    # 'progr' : 'progression'
-    progr_start = randint(1, max_start)
-    progr_step = randint(1, max_step)
-    progr_n = randint(n_start, n_stop)
-    progression = list(progr_start + i * progr_step for i in range(progr_n))
-    # quest_i : index of progression to replace by '..' for question
-    quest_i = randint(0, progr_n - 1)
-    right_answer = f'{progression[quest_i]}'
-    progression[quest_i] = '..'
+
+    progression_start = randint(1, max_start)
+    progression_step = randint(1, max_step)
+    progression_n = randint(n_start, n_stop)
+    progression = list(progression_start + i * progression_step for i in range(progression_n))  # noqa: E501
+    question_i = randint(0, progression_n - 1)  # index for replace to '..'
+    right_answer = f'{progression[question_i]}'
+    progression[question_i] = '..'
     question = ' '.join(str(item) for item in progression)
     return question, right_answer

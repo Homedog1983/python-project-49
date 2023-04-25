@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "hexlet-code"
-version = "0.5.0"
+version = "0.5.1"
 description = "Educational project #1 on Hexlet platform (spec: Python developer)"
 authors = ["Evgeny Sokolov <sokolovsolod@gmail.com>"]
 readme = "README.md"
@@ -16,7 +16,6 @@ brain-calc = "brain_games.scripts.brain_calc:main"
 brain-gcd = "brain_games.scripts.brain_gcd:main"
 brain-progression = "brain_games.scripts.brain_progression:main"
 brain-prime = "brain_games.scripts.brain_prime:main"
-
 
 
 [tool.poetry.dependencies]
