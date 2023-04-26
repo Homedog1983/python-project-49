@@ -5,22 +5,18 @@ from math import sqrt
 DESCRIPTION = 'Answer "yes" if given number is prime. Otherwise answer "no".'
 
 
-def is_prime(test_value) -> bool:
-    if test_value <= 2:
-        return True
-    max_div = round(sqrt(test_value))
+def is_prime(number: int) -> bool:
+    if number <= 1:
+        return False
+    max_div = round(sqrt(number))
     for div in range(2, max_div + 1):
-        if test_value % div == 0:
+        if number % div == 0:
             return False
-    else:
-        return True
+    return True
 
 
 def get_question_answer() -> tuple:
-    # parameters for function's tuning
-    max_value = 200
-
-    value = randint(1, max_value)
-    question = f'{value}'
-    right_answer = 'yes' if is_prime(value) else 'no'
+    number = randint(1, 200)
+    question = f'{number}'
+    right_answer = 'yes' if is_prime(number) else 'no'
     return question, right_answer

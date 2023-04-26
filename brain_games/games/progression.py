@@ -5,7 +5,7 @@ DESCRIPTION = 'What number is missing in the progression?'
 
 
 def get_question_answer() -> tuple:
-    # parameters for function's tuning
+    # parameters for function's fast tuning
     n_start = 5
     n_stop = 15
     max_start = 20
