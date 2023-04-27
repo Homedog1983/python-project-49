@@ -1,4 +1,4 @@
-from random import randint
+from random import randint, choice
 from operator import add, sub, mul
 
 
@@ -7,8 +7,7 @@ DESCRIPTION = 'What is the result of the expression?'
 
 def get_question_answer() -> tuple:
     operations = {'+': add, '-': sub, '*': mul}
-    random_n = randint(0, 2)
-    random_operator = list(operations.keys())[random_n]
+    random_operator = choice(list(operations.keys()))
     a = randint(1, 100)
     b = randint(1, 100)
     question = f'{a} {random_operator} {b}'
